@@ -40,7 +40,7 @@ For Connections see the [Schematic](./KettleController/Controller_Schematic.pdf)
 ---
 ## Hardware Modifications
 
-As mentioned in the Schematic, The board in the base of the kettle needs to be modified, R11 needs to be disconnected from the 5V rail shoewn [here](./img/BoardNormal.jpg) before, and should look like this afterwards:
+As mentioned in the Schematic, The board in the base of the kettle needs to be modified, R11 needs to be disconnected from the 5V rail shown [here](./img/BoardNormal.jpg) before, and should look like this afterwards:
 ![board mod](./img/BoardMod.jpg)
 (it doesn't need to stay on the board, I just did that as a temporary measure)
 
