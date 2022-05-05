@@ -31,6 +31,7 @@ For Connections see the [Schematic](./KettleController/Controller_Schematic.pdf)
 | [Outer Plate](./KettleController/3D_Models/control_box_outer_plate.stl) | Mount Housing | 1 | Fabricate |
 | [Inner Plate](./KettleController/3D_Models/control_box_inner_plate.stl) | Fasten Mount | 1 | Fabricate |
 | [Wemos Clip](./KettleController/3D_Models/control_box_wemos_clip.stl) | Fasten Wemos to the Housing | 1 | Fabricate |
+| [Kettle Wire Clamp](./KettleController/3D_Models/control_box_kettle_wire_clamp.stl) | Fasten Wemos to the Housing | 1 | Fabricate |
 | M2.6x6mm self-tapping screws | Fastening the ring of power | 4 | Purchase|
 | M2.3x8mm self-tapping screws | Fasten the Controller Housing to the Outer Plate | 6 | Purchase |
 | M2.3x8mm self-tapping screws | Fasten the Controller Housing Mount to the inner plate | 4 | Purchase |
