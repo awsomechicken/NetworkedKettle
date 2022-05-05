@@ -1,0 +1,63 @@
+[
+    {
+        "id": "97c038fc087ff319",
+        "type": "group",
+        "z": "a4792d1d7e69fd42",
+        "name": "MQTT Broker",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "dbfe322c9eead754",
+            "247d58e13c7da6e6"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 522,
+        "h": 82
+    },
+    {
+        "id": "dbfe322c9eead754",
+        "type": "aedes broker",
+        "z": "a4792d1d7e69fd42",
+        "g": "97c038fc087ff319",
+        "name": "KettleNet MQTT broker",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "path",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "247d58e13c7da6e6"
+            ],
+            [
+                "247d58e13c7da6e6"
+            ]
+        ]
+    },
+    {
+        "id": "247d58e13c7da6e6",
+        "type": "debug",
+        "z": "a4792d1d7e69fd42",
+        "g": "97c038fc087ff319",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 80,
+        "wires": []
+    }
+]

@@ -1,0 +1,256 @@
+[
+    {
+        "id": "e1c29c091ef57cc5",
+        "type": "group",
+        "z": "86ee4c2a2334f21a",
+        "name": "Phone Detector",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6b0e38420940df81",
+            "2b1692fb49f87929",
+            "4148b808340795b3",
+            "38395f2be340d9d6",
+            "76cd1bab49161041",
+            "a0dbce1b5d30c3e3",
+            "519fc3de2d716e0a",
+            "777db55a1382a934",
+            "35d7b612535bdf5a"
+        ],
+        "x": 84,
+        "y": 239,
+        "w": 1142,
+        "h": 322
+    },
+    {
+        "id": "6b0e38420940df81",
+        "type": "trigger",
+        "z": "86ee4c2a2334f21a",
+        "g": "e1c29c091ef57cc5",
+        "name": "",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "-5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "2b1692fb49f87929"
+            ]
+        ]
+    },
+    {
+        "id": "2b1692fb49f87929",
+        "type": "change",
+        "z": "86ee4c2a2334f21a",
+        "g": "e1c29c091ef57cc5",
+        "name": "temp: MAC ADDR",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "device_mac_addr",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "38395f2be340d9d6"
+            ]
+        ]
+    },
+    {
+        "id": "4148b808340795b3",
+        "type": "exec",
+        "z": "86ee4c2a2334f21a",
+        "g": "e1c29c091ef57cc5",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "519fc3de2d716e0a",
+                "76cd1bab49161041"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "38395f2be340d9d6",
+        "type": "template",
+        "z": "86ee4c2a2334f21a",
+        "g": "e1c29c091ef57cc5",
+        "name": "Get Devce IP using MAC command",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "ip neighbor | grep -i \"{{payload}}\" | cut -d\" \" -f1",
+        "output": "str",
+        "x": 460,
+        "y": 400,
+        "wires": [
+            [
+                "4148b808340795b3"
+            ]
+        ]
+    },
+    {
+        "id": "76cd1bab49161041",
+        "type": "debug",
+        "z": "86ee4c2a2334f21a",
+        "g": "e1c29c091ef57cc5",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a0dbce1b5d30c3e3",
+        "type": "inject",
+        "z": "86ee4c2a2334f21a",
+        "g": "e1c29c091ef57cc5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 360,
+        "wires": [
+            [
+                "2b1692fb49f87929"
+            ]
+        ]
+    },
+    {
+        "id": "519fc3de2d716e0a",
+        "type": "function",
+        "z": "86ee4c2a2334f21a",
+        "g": "e1c29c091ef57cc5",
+        "name": "length > 0 --> device present?",
+        "func": "if(msg.payload.length > 0)\n    msg.payload = true;\nelse\n    msg.payload = false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 460,
+        "wires": [
+            [
+                "777db55a1382a934"
+            ]
+        ]
+    },
+    {
+        "id": "777db55a1382a934",
+        "type": "rbe",
+        "z": "86ee4c2a2334f21a",
+        "g": "e1c29c091ef57cc5",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 910,
+        "y": 520,
+        "wires": [
+            [
+                "76cd1bab49161041",
+                "35d7b612535bdf5a"
+            ]
+        ]
+    },
+    {
+        "id": "35d7b612535bdf5a",
+        "type": "mqtt out",
+        "z": "86ee4c2a2334f21a",
+        "g": "e1c29c091ef57cc5",
+        "name": "",
+        "topic": "phone_presence",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "03a6743492966717",
+        "x": 1110,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "03a6743492966717",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]

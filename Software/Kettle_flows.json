@@ -1,0 +1,1840 @@
+[
+    {
+        "id": "017a8392ab4f5e72",
+        "type": "group",
+        "z": "88c17a89c6bb85aa",
+        "name": "Kettle Settings",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "05535e93feca9466",
+            "834c30de243cda2a",
+            "dae886a33520fd10",
+            "47d8cb7a2dee3f39",
+            "2726a546a780caf2",
+            "7fbb0cc42e3f5f5d",
+            "66b52f2884867fa2",
+            "64d1bbc0e771b62d",
+            "c7c02d199d97ec44",
+            "b22cbf04d9e2e637",
+            "0f03d56838ecca03",
+            "3aeb825c9e727006",
+            "cdabd2456ed4d41a",
+            "cd9c64968512c449",
+            "e6f6f2a9874cc32f",
+            "50af61e9dff684a8",
+            "93e740fceafcb2fe",
+            "70b0d299219d6bb5",
+            "7af6b3ec6c86c8ef",
+            "8493d81bd67dccb4",
+            "970e829d7f6af4ef",
+            "ca71b805d0c2b199",
+            "f2a0908f61687c63",
+            "16a13e79924ee589",
+            "2b67299e5916c5cc",
+            "1ebd92526dbe60fa",
+            "1f875fa4848b5668",
+            "4b4302a0ac3b4b5f",
+            "9cffc667c3802104",
+            "33a0d153f9595d03",
+            "522b4524127f69f8",
+            "210edb714048af14",
+            "3c9068c1ad1bf824",
+            "c2929afa98871cdd",
+            "3b0c89be381434db",
+            "6dbec4ba49e002c7",
+            "c7c59f366791dbc7",
+            "23c6a52508c012d7",
+            "8a57897133ac2e42",
+            "b4ac65b67cdd5805",
+            "dd22dd31ec75341e",
+            "2ae30904e4c0d8df",
+            "143e59eb61ec883d",
+            "f0b505edc36a68da",
+            "1fc2c8c75825dc5c",
+            "6db55429ad5f1548"
+        ],
+        "x": 14,
+        "y": 639,
+        "w": 1372,
+        "h": 922
+    },
+    {
+        "id": "05535e93feca9466",
+        "type": "ui_numeric",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "label": "Preferred Temp.",
+        "tooltip": "",
+        "group": "c9c17af8c14dfe12",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}} F",
+        "min": 0,
+        "max": "350",
+        "step": "5",
+        "className": "",
+        "x": 760,
+        "y": 680,
+        "wires": [
+            [
+                "66b52f2884867fa2"
+            ]
+        ]
+    },
+    {
+        "id": "834c30de243cda2a",
+        "type": "ui_numeric",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "label": "Standby Temp.",
+        "tooltip": "",
+        "group": "c9c17af8c14dfe12",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}} F",
+        "min": 0,
+        "max": "200",
+        "step": "5",
+        "className": "",
+        "x": 760,
+        "y": 740,
+        "wires": [
+            [
+                "64d1bbc0e771b62d"
+            ]
+        ]
+    },
+    {
+        "id": "dae886a33520fd10",
+        "type": "ui_switch",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "label": "Enable Standby Temp.",
+        "tooltip": "Use the standby temperature, otherwise just let the kettle cool off",
+        "group": "c9c17af8c14dfe12",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 780,
+        "y": 860,
+        "wires": [
+            [
+                "b22cbf04d9e2e637"
+            ]
+        ]
+    },
+    {
+        "id": "47d8cb7a2dee3f39",
+        "type": "ui_numeric",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "label": "Standby Temp. Deviation",
+        "tooltip": "",
+        "group": "c9c17af8c14dfe12",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}} F",
+        "min": 0,
+        "max": "200",
+        "step": "5",
+        "className": "",
+        "x": 790,
+        "y": 800,
+        "wires": [
+            [
+                "c7c02d199d97ec44"
+            ]
+        ]
+    },
+    {
+        "id": "2726a546a780caf2",
+        "type": "ui_button",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "group": "c9c17af8c14dfe12",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Apply",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 710,
+        "y": 1300,
+        "wires": [
+            [
+                "7fbb0cc42e3f5f5d",
+                "3c9068c1ad1bf824"
+            ]
+        ]
+    },
+    {
+        "id": "7fbb0cc42e3f5f5d",
+        "type": "function",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "func": "msg.payload = {};\nmsg.payload[\"preferred_temp\"] = Math.round((flow.get(\"preferred_temp\")-32)/1.8);\nmsg.payload[\"standby_temp\"] = Math.round((flow.get(\"standby_temp\")-32)/1.8);\nmsg.payload[\"standby_temp_deviation\"] = Math.round(Math.abs((flow.get(\"standby_temp_deviation\")-32)/1.8));\nmsg.payload[\"enable_standby\"] = flow.get(\"enable_standby\") && flow.get(\"phone_presence\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 1300,
+        "wires": [
+            [
+                "0f03d56838ecca03",
+                "93e740fceafcb2fe"
+            ]
+        ]
+    },
+    {
+        "id": "66b52f2884867fa2",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "preferred_temp",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64d1bbc0e771b62d",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "standby_temp",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7c02d199d97ec44",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "standby_temp_deviation",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1070,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b22cbf04d9e2e637",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enable_standby",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f03d56838ecca03",
+        "type": "debug",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "3aeb825c9e727006",
+        "type": "ui_numeric",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "label": "Standby Start Time",
+        "tooltip": "",
+        "group": "c9c17af8c14dfe12",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2300",
+        "step": "100",
+        "className": "",
+        "x": 770,
+        "y": 980,
+        "wires": [
+            [
+                "cd9c64968512c449"
+            ]
+        ]
+    },
+    {
+        "id": "cdabd2456ed4d41a",
+        "type": "ui_numeric",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "label": "Standby Stop Time",
+        "tooltip": "",
+        "group": "c9c17af8c14dfe12",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2300",
+        "step": "100",
+        "className": "",
+        "x": 770,
+        "y": 1040,
+        "wires": [
+            [
+                "50af61e9dff684a8"
+            ]
+        ]
+    },
+    {
+        "id": "cd9c64968512c449",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "standby_start_time",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e6f6f2a9874cc32f",
+        "type": "mqtt out",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "topic": "kettle_settings",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "03a6743492966717",
+        "x": 1280,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "50af61e9dff684a8",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "standby_stop_time",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93e740fceafcb2fe",
+        "type": "json",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 1090,
+        "y": 1340,
+        "wires": [
+            [
+                "e6f6f2a9874cc32f",
+                "0f03d56838ecca03"
+            ]
+        ]
+    },
+    {
+        "id": "70b0d299219d6bb5",
+        "type": "ui_button",
+        "z": "88c17a89c6bb85aa",
+        "d": true,
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "group": "c9c17af8c14dfe12",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Tare",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 710,
+        "y": 1240,
+        "wires": [
+            [
+                "7af6b3ec6c86c8ef"
+            ]
+        ]
+    },
+    {
+        "id": "7af6b3ec6c86c8ef",
+        "type": "ui_numeric",
+        "z": "88c17a89c6bb85aa",
+        "d": true,
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "label": "Tare Value",
+        "tooltip": "",
+        "group": "c9c17af8c14dfe12",
+        "order": 10,
+        "width": "4",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}mL",
+        "min": 0,
+        "max": "1700",
+        "step": 1,
+        "className": "",
+        "x": 1090,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8493d81bd67dccb4",
+        "type": "mqtt in",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "topic": "kettle_settings_req",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "03a6743492966717",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 1340,
+        "wires": [
+            [
+                "970e829d7f6af4ef"
+            ]
+        ]
+    },
+    {
+        "id": "970e829d7f6af4ef",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 1340,
+        "wires": [
+            [
+                "7fbb0cc42e3f5f5d"
+            ]
+        ]
+    },
+    {
+        "id": "ca71b805d0c2b199",
+        "type": "comment",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "\"?\" from client triggers settings request.",
+        "info": "",
+        "x": 230,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "f2a0908f61687c63",
+        "type": "ui_switch",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "label": "Enable Standby Schedule",
+        "tooltip": "Use the standby temperature, otherwise just let the kettle cool off",
+        "group": "c9c17af8c14dfe12",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 790,
+        "y": 920,
+        "wires": [
+            [
+                "16a13e79924ee589"
+            ]
+        ]
+    },
+    {
+        "id": "16a13e79924ee589",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enable_standby_schedule",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b67299e5916c5cc",
+        "type": "mqtt in",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "topic": "phone_presence",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "03a6743492966717",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 240,
+        "y": 1520,
+        "wires": [
+            [
+                "1ebd92526dbe60fa",
+                "1f875fa4848b5668",
+                "4b4302a0ac3b4b5f"
+            ]
+        ]
+    },
+    {
+        "id": "1ebd92526dbe60fa",
+        "type": "debug",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "1f875fa4848b5668",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "phone_presence",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b4302a0ac3b4b5f",
+        "type": "delay",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 460,
+        "y": 1440,
+        "wires": [
+            [
+                "7fbb0cc42e3f5f5d"
+            ]
+        ]
+    },
+    {
+        "id": "9cffc667c3802104",
+        "type": "ui_text_input",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "label": "Device MAC",
+        "tooltip": "",
+        "group": "c9c17af8c14dfe12",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 750,
+        "y": 1100,
+        "wires": [
+            [
+                "33a0d153f9595d03",
+                "522b4524127f69f8"
+            ]
+        ]
+    },
+    {
+        "id": "33a0d153f9595d03",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device_mac_addr",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "522b4524127f69f8",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device_mac_addr",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "210edb714048af14",
+        "type": "file",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "filename": "/home/pi/kettle_settings.json",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1140,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c9068c1ad1bf824",
+        "type": "function",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "func": "msg.payload = {};\nmsg.payload[\"preferred_temp\"] = flow.get(\"preferred_temp\");\nmsg.payload[\"standby_temp\"] = flow.get(\"standby_temp\");\nmsg.payload[\"standby_temp_deviation\"] = flow.get(\"standby_temp_deviation\");\nmsg.payload[\"enable_standby\"] = flow.get(\"enable_standby\");\nmsg.payload[\"enable_standby_schedule\"] = flow.get(\"enable_standby_schedule\");\nmsg.payload[\"standby_start_time\"] = flow.get(\"standby_start_time\");\nmsg.payload[\"standby_stop_time\"] = flow.get(\"standby_stop_time\");\nmsg.payload[\"device_mac_addr\"] = flow.get(\"device_mac_addr\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 1200,
+        "wires": [
+            [
+                "210edb714048af14"
+            ]
+        ]
+    },
+    {
+        "id": "c2929afa98871cdd",
+        "type": "file in",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "filename": "/home/pi/kettle_settings.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 180,
+        "y": 820,
+        "wires": [
+            [
+                "6dbec4ba49e002c7"
+            ]
+        ]
+    },
+    {
+        "id": "3b0c89be381434db",
+        "type": "inject",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 780,
+        "wires": [
+            [
+                "c2929afa98871cdd",
+                "6db55429ad5f1548"
+            ]
+        ]
+    },
+    {
+        "id": "6dbec4ba49e002c7",
+        "type": "json",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 290,
+        "y": 880,
+        "wires": [
+            [
+                "c7c59f366791dbc7",
+                "23c6a52508c012d7",
+                "1fc2c8c75825dc5c",
+                "f0b505edc36a68da",
+                "143e59eb61ec883d",
+                "2ae30904e4c0d8df",
+                "dd22dd31ec75341e",
+                "b4ac65b67cdd5805",
+                "8a57897133ac2e42"
+            ]
+        ]
+    },
+    {
+        "id": "c7c59f366791dbc7",
+        "type": "debug",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 190,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "23c6a52508c012d7",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "preferred_temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.preferred_temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 680,
+        "wires": [
+            [
+                "05535e93feca9466"
+            ]
+        ]
+    },
+    {
+        "id": "8a57897133ac2e42",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "standby_temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.standby_temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 740,
+        "wires": [
+            [
+                "834c30de243cda2a"
+            ]
+        ]
+    },
+    {
+        "id": "b4ac65b67cdd5805",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "standby_temp_deviation",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.standby_temp_deviation",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 800,
+        "wires": [
+            [
+                "47d8cb7a2dee3f39"
+            ]
+        ]
+    },
+    {
+        "id": "dd22dd31ec75341e",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "enable_standby",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.enable_standby",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 860,
+        "wires": [
+            [
+                "dae886a33520fd10"
+            ]
+        ]
+    },
+    {
+        "id": "2ae30904e4c0d8df",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "enable_standby_schedule",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.enable_standby_schedule",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 920,
+        "wires": [
+            [
+                "f2a0908f61687c63"
+            ]
+        ]
+    },
+    {
+        "id": "143e59eb61ec883d",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "standby_start_time",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.standby_start_time",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 980,
+        "wires": [
+            [
+                "3aeb825c9e727006"
+            ]
+        ]
+    },
+    {
+        "id": "f0b505edc36a68da",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "standby_stop_time",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.standby_stop_time",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 1040,
+        "wires": [
+            [
+                "cdabd2456ed4d41a"
+            ]
+        ]
+    },
+    {
+        "id": "1fc2c8c75825dc5c",
+        "type": "change",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "device_mac_addr",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.device_mac_addr",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 1100,
+        "wires": [
+            [
+                "9cffc667c3802104"
+            ]
+        ]
+    },
+    {
+        "id": "6db55429ad5f1548",
+        "type": "delay",
+        "z": "88c17a89c6bb85aa",
+        "g": "017a8392ab4f5e72",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 560,
+        "y": 1300,
+        "wires": [
+            [
+                "2726a546a780caf2"
+            ]
+        ]
+    },
+    {
+        "id": "c9c17af8c14dfe12",
+        "type": "ui_group",
+        "name": "Kettle Settings",
+        "tab": "18ab42334e746a9d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "03a6743492966717",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "18ab42334e746a9d",
+        "type": "ui_tab",
+        "name": "Kettle",
+        "icon": "free_breakfast",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "969af51a11c79636",
+        "type": "group",
+        "z": "88c17a89c6bb85aa",
+        "name": "Kettle Status and Control",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "14846fca30f6e33c",
+            "417300367735b139",
+            "2fa17f13ee8923fa",
+            "bbca29cb670b1bd0",
+            "0b2add505fef43c7",
+            "24baa3f9aae51b3e",
+            "3521f3bdc2f61e81",
+            "2adc5e4a78030916",
+            "5fa698a40981e126",
+            "e3cad52af2f461a8",
+            "9011c9f76a3c094a",
+            "ba736f84aeb96083",
+            "c1f219de3f558c2f",
+            "35e792453546bd6d",
+            "52ffac117a4f77ae",
+            "f074aec5b5bf1153",
+            "fef732c11092849f",
+            "95208e276c8f3d8b",
+            "b8ce39ae29ece6f8",
+            "1930cee4f018cf6c"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 1132,
+        "h": 602
+    },
+    {
+        "id": "14846fca30f6e33c",
+        "type": "mqtt in",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "topic": "kettle_status",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "03a6743492966717",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 490,
+        "y": 500,
+        "wires": [
+            [
+                "e3cad52af2f461a8",
+                "9011c9f76a3c094a",
+                "5fa698a40981e126",
+                "bbca29cb670b1bd0",
+                "f074aec5b5bf1153"
+            ]
+        ]
+    },
+    {
+        "id": "417300367735b139",
+        "type": "mqtt out",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "topic": "kettle_command",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "03a6743492966717",
+        "x": 520,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "2fa17f13ee8923fa",
+        "type": "debug",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "bbca29cb670b1bd0",
+        "type": "function",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "func": "switch(msg.payload.mode){\n    case 0: msg.payload = \"Idle\"; break;\n    case 1: msg.payload = \"Heating to Preferred T.\"; break;\n    case 2: msg.payload = \"Heating to Standby T.\"; break;\n    case 3: msg.payload = \"ERROR!\"; break;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 500,
+        "wires": [
+            [
+                "1930cee4f018cf6c"
+            ]
+        ]
+    },
+    {
+        "id": "0b2add505fef43c7",
+        "type": "mqtt in",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "topic": "kettle_command",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "03a6743492966717",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "2fa17f13ee8923fa"
+            ]
+        ]
+    },
+    {
+        "id": "24baa3f9aae51b3e",
+        "type": "ui_button",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "group": "f741b4d9a08dfc92",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "label": "Engage",
+        "tooltip": "Turn on the kettle and bring up to preferred temperature",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-fire",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 280,
+        "y": 300,
+        "wires": [
+            [
+                "2fa17f13ee8923fa",
+                "417300367735b139"
+            ]
+        ]
+    },
+    {
+        "id": "3521f3bdc2f61e81",
+        "type": "inject",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "24baa3f9aae51b3e"
+            ]
+        ]
+    },
+    {
+        "id": "2adc5e4a78030916",
+        "type": "ui_button",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "group": "f741b4d9a08dfc92",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "label": "Disengage",
+        "tooltip": "Turn on the kettle and bring up to preferred temperature",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-ban",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "417300367735b139"
+            ]
+        ]
+    },
+    {
+        "id": "5fa698a40981e126",
+        "type": "function",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "func": "msg.payload = Math.round(msg.payload.cur_temp*1.8+32);\nmsg.topic = \"Water\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 320,
+        "wires": [
+            [
+                "fef732c11092849f",
+                "b8ce39ae29ece6f8"
+            ]
+        ]
+    },
+    {
+        "id": "e3cad52af2f461a8",
+        "type": "debug",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9011c9f76a3c094a",
+        "type": "function",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "func": "// var msg = {};\n// var msg1 = {};\n\n// msg.payload = msg.payload.cur_temp*1.8+32;\n// msg.topic = \"Water\";\nmsg.payload = Math.round(msg.payload.set_temp*1.8+32);\nmsg.topic = \"Setpoint\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 380,
+        "wires": [
+            [
+                "b8ce39ae29ece6f8",
+                "95208e276c8f3d8b"
+            ]
+        ]
+    },
+    {
+        "id": "ba736f84aeb96083",
+        "type": "inject",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "Clear chart",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 740,
+        "y": 440,
+        "wires": [
+            [
+                "b8ce39ae29ece6f8"
+            ]
+        ]
+    },
+    {
+        "id": "c1f219de3f558c2f",
+        "type": "ui_chart",
+        "z": "88c17a89c6bb85aa",
+        "d": true,
+        "g": "969af51a11c79636",
+        "name": "",
+        "group": "f741b4d9a08dfc92",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "Raw ADC Values",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 960,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35e792453546bd6d",
+        "type": "inject",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "Clear chart",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 720,
+        "y": 200,
+        "wires": [
+            [
+                "c1f219de3f558c2f"
+            ]
+        ]
+    },
+    {
+        "id": "52ffac117a4f77ae",
+        "type": "ui_gauge",
+        "z": "88c17a89c6bb85aa",
+        "d": true,
+        "g": "969af51a11c79636",
+        "name": "",
+        "group": "f741b4d9a08dfc92",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4096",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 910,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f074aec5b5bf1153",
+        "type": "function",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "func": "msg.payload = msg.payload.RawADC;\nmsg.topic = \"Raw T\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 580,
+        "wires": [
+            [
+                "c1f219de3f558c2f",
+                "52ffac117a4f77ae"
+            ]
+        ]
+    },
+    {
+        "id": "fef732c11092849f",
+        "type": "ui_gauge",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "group": "f741b4d9a08dfc92",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Current Water Temp.",
+        "label": "F",
+        "format": "{{value}}F",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 980,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "95208e276c8f3d8b",
+        "type": "ui_gauge",
+        "z": "88c17a89c6bb85aa",
+        "d": true,
+        "g": "969af51a11c79636",
+        "name": "",
+        "group": "f741b4d9a08dfc92",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Water Level",
+        "label": "mL",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1700",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "300",
+        "seg2": "700",
+        "className": "",
+        "x": 950,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b8ce39ae29ece6f8",
+        "type": "ui_chart",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "name": "",
+        "group": "f741b4d9a08dfc92",
+        "order": 5,
+        "width": "6",
+        "height": "4",
+        "label": "Temperature Histogram (F)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "Awaiting Liquid Vessel State...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "220",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1000,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1930cee4f018cf6c",
+        "type": "ui_text",
+        "z": "88c17a89c6bb85aa",
+        "g": "969af51a11c79636",
+        "group": "f741b4d9a08dfc92",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kettle State",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "f741b4d9a08dfc92",
+        "type": "ui_group",
+        "name": "Kettle",
+        "tab": "18ab42334e746a9d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    }
+]
