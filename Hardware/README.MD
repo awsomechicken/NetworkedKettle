@@ -7,10 +7,11 @@ This folder has the hardware needed to build my prototype of the kettle, more sp
 - Board Designs (KiCad)
 - Controller Firmware (Arduino Framework, Initial revision)
 
+For Connections see the [Schematic](./KettleController/Controller_Schematic.pdf).
+
 ## To Do
 - [x] Publish the Project
 - [ ] Migrate firmware to ESP-IDF
-- [ ] Develop a Base firmware using the ESP-IDF for ease of development
 - [ ] Eliminate _The Ring of Power_.
 
 
