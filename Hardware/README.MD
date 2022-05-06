@@ -1,5 +1,5 @@
 # Hardware
-This folder will contain any hardware pertaining to the Project, including formware.
+This folder will contain any hardware pertaining to the Project, including firmware.
 
 ![Controller](./img/Controller.jpg)
 
@@ -50,4 +50,4 @@ To install the ring of power, there are 2 pogo-pins that need to be installed in
 The Ring itself will also need 2 holed drilled to accept power leads, and you can use the same drill template as for the pogo pins, just drill it out larger to fit your wired through. I'd recommend silicone insulated wires for this application, as I don't have a method devised to restrain them from coming into contact with the kettle heater.
 The installed ring of power should look like this:
 ![ring base](./img/ring_install.jpg)
-abd is mounted with 4x M2.6x6mm self-tapping screws
+and is mounted with 4x M2.6x6mm self-tapping screws
